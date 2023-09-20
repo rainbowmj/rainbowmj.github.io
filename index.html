@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html  >
+<html>
 <head>
-  <!-- Site made with Mobirise Website Builder v5.9.6, https://mobirise.com -->
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.9.6, mobirise.com">
+  <html lang="pl">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/1x1transparents-96x54.png" type="image/x-icon">
   <meta name="description" content="TEST RainbowMJ">
@@ -22,6 +21,18 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
 
+  <script>
+        function check_checkbox() {
+            var checkbox = document.getElementById("zgoda_dane");
+            var button_zgoda = document.getElementById("button_zgoda");
+
+            if (checkbox.checked) {
+                button_zgoda.disabled = false;
+            } else {
+                button_zgoda.disabled = true;
+            }
+        }
+  </script>
   
   
   
@@ -54,10 +65,10 @@
 						<a class="nav-link link text-black text-primary display-4" href="index.html#contacts02-1o">Kontakt</a>
 					</li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html#list02-1p">FAQ</a></li></ul>
 				<div class="icons-menu">
-					<a class="iconfont-wrapper" href="https://mobiri.se">
+					<a class="iconfont-wrapper" href="tel:228337625">
 						<span class="p-2 mbr-iconfont mobi-mbri-phone mobi-mbri"></span>
 					</a>
-					<a class="iconfont-wrapper" href="https://mobiri.se">
+					<a class="iconfont-wrapper" href="mailto:biuro.rainbowmj@gmail.com">
 						<span class="p-2 mbr-iconfont mobi-mbri-letter mobi-mbri"></span>
 					</a>
 					<a class="iconfont-wrapper" href="https://maps.app.goo.gl/4SJUoJwKoq97uyHn7" target="_blank">
@@ -189,11 +200,11 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="06tkLPZuPLjHEY6lEwCm6avdaeYsd2mwd4qVpME3JJQ0vwVaZGlTvXiewWu3fquj3SHumE4gILteVd8i6ELpHwWgv/n82mzJ7KZLmE8Uj8mKwPgZUgEomln8QtePSbxc">
+                <form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="3B+JQhRRH33zpH4elGzAi39JtCsZDvt7FkA8rNSBOYUC4/ngem23x2s580vD0S9sODX+x+U9zU9YsVHcc2UOxIqkAFvD5ro+VyusvuOw4XE90UesKk96XWOrv5tPyPSw">
                     <div class="row">
                         <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Dziękujemy za kontakt, postaramy się odpowiedzieć w przeciągu 24h.</div>
                         <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                            Oops...! some problem!
+                            Ups... Napotkaliśmy problem.
                         </div>
                     </div>
                     <div class="dragArea row">
@@ -208,8 +219,11 @@
                         </div>
                         <div class="col-12 form-group mb-3" data-for="textarea">
                             <textarea name="textarea" placeholder="PREZENTACJA / SERWIS" data-form-field="textarea" class="form-control" id="textarea-form02-1r"></textarea>
+							<label>
+								<input type="checkbox" id="zgoda_dane" onchange="check_checkbox()"> *Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych osobowych, w związku z przesłaniem powyższego formularza. Podanie danych jest dobrowolne, ale niezbędne do przetworzenia zapytania. Zostałem/-am poinformowany/-a, że przysługuje mi prawo dostępu do swoich danych, możliwości ich poprawiania, żądania zaprzestania ich przetwarzania. Administratorem danych osobowych jest RainbowMJ s. c. z siedzibą Warszawie, ul. Samuela Twardowskiego 11, e-mail: biuro.rainbowmj@gmail.com. </input>
+							</label>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-primary display-7">WYŚLIJ ZGŁOSZENIE</button></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button id="button_zgoda" type="submit" class="btn btn-primary display-7" disabled>WYŚLIJ ZGŁOSZENIE</button></div>
                     </div>
                 </form>
             </div>
